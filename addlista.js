@@ -17,7 +17,7 @@ btsend.addEventListener('click', e => {
     let level;
 
     //verifica se dados foram inseridos
-    if (age == 0 || nome == '') 
+    if (age == 0 || name == '') 
         alert("Dados vazios!!");
 
     else {
