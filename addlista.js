@@ -7,6 +7,7 @@ const inname = document.querySelector("#name");
 const inage = document.querySelector("#age");
 
 btsend.addEventListener('click', e => {
+
     //bloqueando action do botão
     e.preventDefault();
 
@@ -15,22 +16,28 @@ btsend.addEventListener('click', e => {
     let age = Number(inage.value);
     let level;
 
-    //reset do formulario
-    inname.value = inage.value = '';
-    inname.focus();
+    //verifica se dados foram inseridos
+    if (age == 0 || nome == '') 
+        alert("Dados vazios!!");
 
-    //teste de idade para adicionar usuario
-    if (age < 18)
-        level = "listajunior"
-    else if (age <= 40)
-        level = "listamaster"
-    else
-        level = "listasenior"
+    else {
+        //reset do formulario
+        inname.value = inage.value = '';
+        inname.focus(); 
+        
+        //teste de idade para adicionar usuario
+        if (age < 18)
+            level = "listajunior"
+        else if (age <= 40)
+            level = "listamaster"
+        else
+            level = "listasenior"
 
-    //inclusao do usuario na lista correspondente
-    let addlist = document.querySelector(`#${level}`);
-    let li = `<li>Nome: ${name}; Idade: ${age};`;
-    addlist.innerHTML += li;
-
-    //alert("DEV adicionado");
+        //inclusao do usuario na lista correspondente
+        let addlist = document.querySelector(`#${level}`);
+        let li = `<li>Nome: ${name}; Idade: ${age};`;
+        addlist.innerHTML += li;
+        //alert("DEV adicionado");
+    }
+    
 });
