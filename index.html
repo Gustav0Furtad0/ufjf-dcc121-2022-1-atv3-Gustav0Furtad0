@@ -20,14 +20,14 @@
                 <h2 class="tituloform">Adicionar DEV</h2>
                 <div class="formline">
                     <label for="name">Nome</label>
-                    <input type="text" name="name" id="name">
+                    <input required type="text" name="name" id="name">
                 </div>
                 <div class="formline">
                     <label for="age">Idade</label>
-                    <input type="number" name="age" id="age">
+                    <input required type="number" name="age" id="age">
                 </div>
                 <div class="formline">
-                    <button type="submit">Adicionar</button>
+                    <button id="btsend" type="submit">Adicionar</button>
                 </div>
             </form>
         </div>
@@ -37,35 +37,48 @@
             <div class="cabeca">
                 <h2 class="titulolista">Lista Júnior</h2>
             </div>
-            <ul>
-                <li>Nome: Gustavo Futado de Jesus, Idade: 11</li>
-                <li>Nome: Pedro, Idade: 11</li>
-                <li>Nome: Marcão, Idade: 11</li>
-                <li>Nome: Leozein, Idade: 22</li>
+            <ul id="listajunior">
             </ul>
         </section>
         <section class="masterframe tab">
             <div class="cabeca">
                 <h2 class="titulolista">Lista Master</h2>
             </div>
-            <ul>
-                <li>Nome: Gustavo, Idade: 11</li>
-                <li>Nome: Pedro, Idade: 11</li>
-                <li>Nome: Marcão, Idade: 11</li>
-                <li>Nome: Leozein, Idade: 22</li>
+            <ul id="listamaster">
             </ul>
         </section>
         <section class="seniorframe tab">
             <div class="cabeca">
                 <h2 class="titulolista">Lista Sênior</h2>
             </div>
-            <ul>
-                <li>Nome: Gustavo, Idade: 11</li>
-                <li>Nome: Pedro, Idade: 11</li>
-                <li>Nome: Marcão, Idade: 11</li>
-                <li>Nome: Leozein, Idade: 22</li>
+            <ul id="listasenior">
             </ul>
         </section>
     </main>
+    <script>
+        const btsend = document.querySelector("#btsend");
+        const inname = document.querySelector("#name");
+        const inage = document.querySelector("#age");
+
+
+        btsend.addEventListener('click', (e) => {
+            e.preventDefault();
+            let name = inname.value;
+            let age = Number(inage.value);
+            let level;
+
+            if (age < 18)
+                level = "listajunior"
+            else if (age <= 40)
+                level = "listamaster"
+            else
+                level = "listasenior"
+
+            let addlist = document.querySelector(`#${level}`);
+            let li = `<li>Nome: ${name}; Idade: ${age};`;
+            addlist.innerHTML += li;
+        }); 
+    </script>
+    <script src="./addlista.js"></script>
 </body>
 </html>
