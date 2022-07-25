@@ -13,6 +13,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
     font-size: 1.2em;
+    height: 100vh;
 }
 
 nav {
@@ -21,6 +22,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    height: 10%;
     background-color: blueviolet;
 }
 
@@ -31,6 +33,7 @@ nav > h1 {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 90%;
 }
 
 .formframe {
@@ -40,10 +43,11 @@ main {
 }
 
 .formulario {
-    box-shadow: 0px 0px 37px -2px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.67);
     border-radius: 10px;
     width: 100%;
     padding: 40px;
+    height: 300px;
 }
 
 .tituloform {
@@ -79,4 +83,30 @@ main {
 .tab {
     border: solid 1px black;
     max-width: 100%;
+    height: 100%;
+}   
+
+.tab ul {
+    padding: 0 30px;
 }
+
+.juniorframe {
+    background-color: #f2fff3;
+    color: #008a07;
+}
+
+.masterframe {
+    background-color: #f4faff;
+    color: #001691;
+}
+
+.seniorframe {
+    background-color: #f7f4ff;
+    color: #4e0097;
+}
+
+.titulolista {
+    text-align: center;
+    color: black;
+}
+
