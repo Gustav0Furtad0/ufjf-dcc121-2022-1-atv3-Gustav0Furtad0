@@ -63,6 +63,7 @@ main {
     border-radius: 3px;
     background-color: #aa79d8;
     color: white;
+    width: 70px;
 }
 
 .formulario button:hover {
@@ -110,3 +111,6 @@ main {
     color: black;
 }
 
+.bts {
+    display: flex;
+}
