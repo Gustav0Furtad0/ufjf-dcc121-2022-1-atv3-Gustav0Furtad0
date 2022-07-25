@@ -1,4 +1,7 @@
-//buscando endereço dos elementos
+//utilizacao do modo restrito
+'use strict';
+
+//buscando endereco dos elementos
 const btsend = document.querySelector("#btsend");
 const inname = document.querySelector("#name");
 const inage = document.querySelector("#age");
@@ -6,16 +9,17 @@ const inage = document.querySelector("#age");
 btsend.addEventListener('click', e => {
     //bloqueando action do botão
     e.preventDefault();
+
+    //definicao de variaveis
     let name = inname.value;
     let age = Number(inage.value);
     let level;
 
-    //reset do formulário
-    inname.value = '';
-    inage.value = '';
+    //reset do formulario
+    inname.value = inage.value = '';
     inname.focus();
 
-    //teste de idade para adicionar usuário
+    //teste de idade para adicionar usuario
     if (age < 18)
         level = "listajunior"
     else if (age <= 40)
@@ -23,10 +27,10 @@ btsend.addEventListener('click', e => {
     else
         level = "listasenior"
 
-    //adicionando usuário na lista correspondente
+    //inclusao do usuario na lista correspondente
     let addlist = document.querySelector(`#${level}`);
     let li = `<li>Nome: ${name}; Idade: ${age};`;
     addlist.innerHTML += li;
-    
+
     //alert("DEV adicionado");
 });
