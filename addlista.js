@@ -27,5 +27,6 @@ btsend.addEventListener('click', e => {
     let addlist = document.querySelector(`#${level}`);
     let li = `<li>Nome: ${name}; Idade: ${age};`;
     addlist.innerHTML += li;
+    
     //alert("DEV adicionado");
 });
