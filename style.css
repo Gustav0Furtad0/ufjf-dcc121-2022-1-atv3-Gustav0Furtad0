@@ -28,5 +28,16 @@ nav > h1 {
 
 main {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.tab {
+    border: solid 1px black;
+    max-width: 100%;
 }
