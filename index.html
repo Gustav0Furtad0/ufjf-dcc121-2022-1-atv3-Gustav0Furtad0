@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--cabecalho da página-->
     <header>
         <h1>Lista de Desenvolvedores</h1>
     </header>
 
+    <!--conteudo principal da página-->
     <main>
-        <div class="formframe tab">    
+        <!--section destinada ao formulario-->
+        <section class="formframe tab">    
             <form class="formulario" action="#">
                 <h2 class="tituloform">Adicionar DEV</h2>
                 <div class="formline">
@@ -29,9 +32,9 @@
                     <button type="reset">Limpar</button>
                 </div>
             </form>
-        </div>
+        </section>
 
-
+        <!--conjunto de section destinadas as listas-->
         <section class="juniorframe tab">
             <div class="cabeca">
                 <h2 class="titulolista">Júnior</h2>
@@ -53,7 +56,10 @@
             <ul id="listasenior">
             </ul>
         </section>
+
     </main>
+
+    <!--inclusao do arquivo addlista.js para manipulacao do DOM-->
     <script src="./addlista.js"></script>
 </body>
 </html>
